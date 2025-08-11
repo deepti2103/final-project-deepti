@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
     setError("");
     try {
-      await login(form.email, form.password);   // <-- correct call
+      await login(form.email, form.password);   
       navigate("/dashboard", { replace: true });
     } catch (err) {
       setError(err.message || "Login failed.");
@@ -35,4 +35,5 @@ export default function Login() {
       <p className="small">New here? <Link to="/signup">Create an account</Link></p>
     </div>
   );
+
 }
